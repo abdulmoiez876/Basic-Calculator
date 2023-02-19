@@ -34,7 +34,7 @@ function actionHandler(event) {
         document.getElementsByTagName('input')[0].value = expression;
     }
     else if(event.target.innerHTML === 'x2') {
-        expression = eval(expression) * 2;
+        expression *= eval(expression);
         document.getElementsByTagName('input')[0].value = expression;
     }
     else if(event.target.innerHTML === '√') {
