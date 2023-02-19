@@ -59,10 +59,13 @@ function storageHandler(event) {
     else if(event.target.innerHTML === 'MC') {
         global = '';
     }
-}
-
-function isNumeric(expression) {
-    expression.foreach(character => {
-
-    })
+    else if(event.target.innerHTML === 'MR') {
+        expression = global;
+        document.getElementsByName('input')[0].value = expression;
+    }
+    else if(event.target.innerHTML === 'M+') {
+        expression += global;
+        global = expression;
+        document.getElementsByName('input')[0].value = expression;
+    }
 }
